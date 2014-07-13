@@ -9,4 +9,6 @@ datetime <- paste(dat$Date,dat$Time)
 datetime_fixed  <- strptime(datetime,format ="%d/%m/%Y %H:%M:%S")
 
 #1st plot
+png(file="plot1.png")
 hist(dat$Global_active_power, main=paste("Global Active Power"),xlab="Global Active Power (kilowatts)",col="red") 
+dev.ff()

@@ -8,4 +8,6 @@ datetime <- paste(dat$Date,dat$Time)
 datetime_fixed  <- strptime(datetime,format ="%d/%m/%Y %H:%M:%S")
 
 #2nd plot 
+png(file="plot2.png")
 plot(dat$datetime_fixed,dat$Global_active_power,ylab="Global Active Power (kilowatts)",xlab="", type="l" )
+dev.off()
